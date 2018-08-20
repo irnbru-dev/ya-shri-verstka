@@ -1,0 +1,22 @@
+.nav {
+  display: inline-block;
+
+  &__nav-item {
+    margin: 0 7px;
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__nav-link {
+    color: #333;
+    opacity: 0.6;
+    &:hover, &.active {
+      opacity: 1;
+    }
+  }
+}

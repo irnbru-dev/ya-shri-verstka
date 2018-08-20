@@ -1,0 +1,40 @@
+.popup {
+  display: grid;
+  grid-template-rows: 200px 60px;
+  grid-template-columns: repeat(2, 300px);
+  grid-gap: 15px;
+  z-index: 10;
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    opacity: 0.5;
+    z-index: 2;
+  }
+
+  &__main {
+    background-color: #fff;
+    z-index: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  &__btn {
+    z-index: 3;
+    border:0;
+    border-radius: 20px;
+    font-weight: 700;
+  }
+
+  &__action-btn {
+    background-color: #FFD93E;
+  }
+
+  &__close-btn {
+    background-color: #fff;
+  }
+}

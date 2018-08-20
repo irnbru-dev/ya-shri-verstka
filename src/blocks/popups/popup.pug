@@ -1,0 +1,8 @@
+mixin popup(id, title, state)
+    div.popup(id=id)
+        div.popup__overlay
+        div.popup__main
+            h2.popup__title= title
+            p.popup__state= state
+        button.popup__btn.popup__action-btn Применить
+        button.popup__btn.popup__close-btn Закрыть

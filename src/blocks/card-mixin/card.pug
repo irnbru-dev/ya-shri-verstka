@@ -1,0 +1,6 @@
+mixin card(subjHref, subjImgSrc, subjTxt, subjState)
+    a(href= subjHref).card
+        img(src= subjImgSrc)
+        div.card__subj= subjTxt
+        span.card__state= subjState
+        block

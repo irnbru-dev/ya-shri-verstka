@@ -1,0 +1,29 @@
+.main-nav.collapsed {
+  position: relative;
+  margin: 0 0 0 auto;
+
+  .burger-btn {
+    display: inline-block;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav.open {
+    position: absolute;
+    top: 21px;
+    right: 0;
+    display: block;
+    background: #f0f0f0;
+    width: 200px;
+    padding: 15px;
+    z-index: 2;
+
+    .nav__nav-item {
+      display: block;
+      margin: 7px 0;
+    }
+  }
+
+}

@@ -1,0 +1,12 @@
+include ../connect/_blocks.pug
+
+doctype html
+html
+    include _head.pug
+
+    body
+        div.content
+            +header()
+            block content
+        +footer()
+        include _scripts.pug

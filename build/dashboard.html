@@ -33,6 +33,76 @@
           </div>
         </div>
       </header>
+      <div class="popup" id="popup__temp">
+        <div class="popup__overlay"></div>
+        <div class="popup__main">
+          <h2 class="popup__title">Elgato Eve Degree Connected</h2>
+          <p class="popup__state">Выключено до 17:00</p>
+          <div class="popup__icon">
+            <span class="popup__custom-value">+23</span>
+            <img src="" />
+          </div>
+          <div class="filtr">
+            <ul class="filtr__list">
+              <li class="filtr__filtr-item">
+                <a class="filtr__filtr-link" href="#">item1</a>
+              </li>
+              <li class="filtr__filtr-item">
+                <a class="filtr__filtr-link" href="#">item2</a>
+              </li>
+              <li class="filtr__filtr-item">
+                <a class="filtr__filtr-link" href="#">item3</a>
+              </li>
+              <li class="filtr__filtr-item">
+                <a class="filtr__filtr-link" href="#">item4</a>
+              </li>
+              <li class="filtr__filtr-item">
+                <a class="filtr__filtr-link" href="#">item5</a>
+              </li>
+            </ul>
+          </div>
+          <div class="range-wrap">
+            <input class="range range__temp" type="range" min="-10" max="+30" />
+          </div>
+        </div>
+        <button class="popup__btn popup__action-btn">Применить</button>
+        <button class="popup__btn popup__close-btn">Закрыть</button>
+      </div>
+      <div class="popup" id="popup__light">
+        <div class="popup__overlay"></div>
+        <div class="popup__main">
+          <h2 class="popup__title">Xiaomi Mi Air Purifier 2S</h2>
+          <p class="popup__state">Включено</p>
+          <div class="popup__icon">
+            <span class="popup__custom-value"></span>
+            <img/>
+          </div>
+          <div class="filtr">
+            <ul class="filtr__list">
+              <li class="filtr__filtr-item">
+                <a class="filtr__filtr-link" href="#">item1</a>
+              </li>
+              <li class="filtr__filtr-item">
+                <a class="filtr__filtr-link" href="#">item2</a>
+              </li>
+              <li class="filtr__filtr-item">
+                <a class="filtr__filtr-link" href="#">item3</a>
+              </li>
+              <li class="filtr__filtr-item">
+                <a class="filtr__filtr-link" href="#">item4</a>
+              </li>
+              <li class="filtr__filtr-item">
+                <a class="filtr__filtr-link" href="#">item5</a>
+              </li>
+            </ul>
+          </div>
+          <div class="range-wrap">
+            <input class="range range__light" type="range" />
+          </div>
+        </div>
+        <button class="popup__btn popup__action-btn">Применить</button>
+        <button class="popup__btn popup__close-btn">Закрыть</button>
+      </div>
       <div class="container">
         <section class="main-window-grid">
           <div>
@@ -82,19 +152,10 @@
               </div>
             </div>
             <div class="selected-sceme-grid">
-              <a class="card" href="#popup_light">
+              <a class="card" href="#">
                 <img src="" />
                 <div class="card__subj">Выключить весь свет в доме и во дворе</div>
                 <span class="card__state"></span>
-                <div class="popup" id="popup__light">
-                  <div class="popup__overlay"></div>
-                  <div class="popup__main">
-                    <h2 class="popup__title">Xiaomi Yeelight LED Smart Bulb</h2>
-                    <p class="popup__state">Включится в 17:00</p>
-                  </div>
-                  <button class="popup__btn popup__action-btn">Применить</button>
-                  <button class="popup__btn popup__close-btn">Закрыть</button>
-                </div>
               </a>
               <a class="card" href="#">
                 <img src="" />
@@ -133,19 +194,19 @@
           <div class="filtr">
             <ul class="filtr__list">
               <li class="filtr__filtr-item">
-                <a class="filtr__filtr-link" href="#">Все</a>
+                <a class="filtr__filtr-link" href="#">item1</a>
               </li>
               <li class="filtr__filtr-item">
-                <a class="filtr__filtr-link" href="#">Кухня</a>
+                <a class="filtr__filtr-link" href="#">item2</a>
               </li>
               <li class="filtr__filtr-item">
-                <a class="filtr__filtr-link" href="#">Зал</a>
+                <a class="filtr__filtr-link" href="#">item3</a>
               </li>
               <li class="filtr__filtr-item">
-                <a class="filtr__filtr-link" href="#">Лампочки</a>
+                <a class="filtr__filtr-link" href="#">item4</a>
               </li>
               <li class="filtr__filtr-item">
-                <a class="filtr__filtr-link" href="#">Камеры</a>
+                <a class="filtr__filtr-link" href="#">item5</a>
               </li>
             </ul>
           </div>
@@ -160,12 +221,12 @@
               <div class="card__subj">D-Link Omna 180 Cam</div>
               <span class="card__state">Включится в 17:00</span>
             </a>
-            <a class="card" href="#">
+            <a class="card" href="#popup__temp">
               <img src="" />
               <div class="card__subj">Elgato Eve Degree Connected</div>
               <span class="card__state">Выключено до 17:00</span>
             </a>
-            <a class="card" href="#">
+            <a class="card" href="#popup__light">
               <img src="" />
               <div class="card__subj">Xiaomi Mi Air Purifier 2S</div>
               <span class="card__state">Включено</span>

@@ -1,14 +1,10 @@
+- var items =['item1', 'item2', 'item3', 'item4', 'item5'];
+
 mixin filtr()
     div.filtr
         ul.filtr__list
-            li.filtr__filtr-item
-                a(href="#").filtr__filtr-link Все
-            li.filtr__filtr-item
-                a(href="#").filtr__filtr-link Кухня
-            li.filtr__filtr-item
-                a(href="#").filtr__filtr-link Зал
-            li.filtr__filtr-item
-                a(href="#").filtr__filtr-link Лампочки
-            li.filtr__filtr-item
-                a(href="#").filtr__filtr-link Камеры
+            each item in items
+                li.filtr__filtr-item
+                    a(href="#").filtr__filtr-link= item
+
     block

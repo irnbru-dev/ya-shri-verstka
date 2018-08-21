@@ -2,6 +2,14 @@ extends ../layout/main
 
 block content
 
+    +popup('popup__temp', 'Elgato Eve Degree Connected', 'Выключено до 17:00', '', '+23')
+        +filtr()
+        +range('range__temp', '-10', '+30')
+
+    +popup('popup__light', 'Xiaomi Mi Air Purifier 2S', 'Включено')
+        +filtr()
+        +range('range__light')
+
     div.container
         section.main-window-grid
             div
@@ -15,8 +23,7 @@ block content
                 h2 Избранные сценарии
                 +controls()
                 div.selected-sceme-grid
-                    +card('#popup_light', '', 'Выключить весь свет в доме и во дворе' )
-                        +popup('popup__light', 'Xiaomi Yeelight LED Smart Bulb', 'Включится в 17:00')
+                    +card('#', '', 'Выключить весь свет в доме и во дворе' )
                     +card('#', '', 'Я ухожу')
                     +card('#', '', 'Включить свет в коридоре')
                     +card('#', '', 'Набрать горячую ванну', 'Начнется в 18:00')
@@ -28,6 +35,6 @@ block content
             div.selected-device-grid
                 +card('#', '', 'Xiaomi Yeelight LED Smart Bulb', 'Включено')
                 +card('#', '', 'D-Link Omna 180 Cam', 'Включится в 17:00')
-                +card('#', '', 'Elgato Eve Degree Connected', 'Выключено до 17:00')
-                +card('#', '', 'Xiaomi Mi Air Purifier 2S', 'Включено')
+                +card('#popup__temp', '', 'Elgato Eve Degree Connected', 'Выключено до 17:00')
+                +card('#popup__light', '', 'Xiaomi Mi Air Purifier 2S', 'Включено')
                 +card('#', '', 'Philips Zhirui', 'Выключено')

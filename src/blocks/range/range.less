@@ -1,0 +1,60 @@
+.range {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  height: 60px;
+  width: 100%;
+  outline: none;
+  border-radius: 30px;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 60px;
+    height: 60px;
+    box-shadow:  0 0 0 4px #fff;
+    border: 3px solid rgba(0, 0, 0, .1);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &::-moz-range-thumb {
+    width: 60px;
+    height: 60px;
+    box-shadow:  0 0 0 4px #fff;
+    //border: 3px solid rgba(51, 51, 51, 0.10);
+    border: 3px solid rgba(0, 0, 0, .1);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__temp {
+    background: linear-gradient(to right, #068FFF, #FFD800, #F76B1C);
+  }
+
+  &__light {
+    background: linear-gradient(to right, #FFE682, #FF9E00);
+  }
+}
+
+.range-wrap {
+  position: relative;
+}
+
+.range-wrap:before,
+.range-wrap:after {
+  position: absolute;
+  color: #fff;
+  top:50%;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.range-wrap:before {
+  content: '-10';
+  left: 20px;
+
+}
+.range-wrap:after {
+  content: '+30';
+  right: 20px;
+}

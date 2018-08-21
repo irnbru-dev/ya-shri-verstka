@@ -1,6 +1,13 @@
 .popup {
+  display: none;
+}
+
+.popup.open {
   display: grid;
-  grid-template-rows: 200px 60px;
+}
+
+.popup {
+  grid-template-rows: 240px 60px;
   grid-template-columns: repeat(2, 300px);
   grid-gap: 15px;
   z-index: 10;
@@ -10,6 +17,10 @@
   left: 0;
   right: 0;
   bottom: 0;
+
+  &__wrap {
+    position: relative;
+  }
 
   &__overlay {
     position: fixed;
@@ -23,10 +34,34 @@
   }
 
   &__main {
+    position: relative;
+    padding: 20px;
+    border-radius: 20px;
     background-color: #fff;
     z-index: 3;
     grid-column-start: 1;
     grid-column-end: 3;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__state {
+    margin-top: 5px;
+  }
+
+  &__icon {
+    position: absolute;
+    min-width: 20px;
+    min-height: 20px;
+    top: 20px;
+    right: 20px;
+  }
+
+  &__custom-value {
+    font-size: 30px;
+    font-weight: 700;
   }
 
   &__btn {
@@ -34,6 +69,8 @@
     border:0;
     border-radius: 20px;
     font-weight: 700;
+    outline: none;
+    cursor: pointer;
   }
 
   &__action-btn {
@@ -42,5 +79,13 @@
 
   &__close-btn {
     background-color: #fff;
+  }
+
+  .filtr__filtr-item:first-child {
+    margin-left: 0;
+  }
+
+  .range {
+    margin-top: 25px;
   }
 }

@@ -1,8 +1,12 @@
-mixin popup(id, title, state)
+mixin popup(id, title, state, iconSrc, value)
     div.popup(id=id)
         div.popup__overlay
         div.popup__main
             h2.popup__title= title
             p.popup__state= state
+            div.popup__icon
+                span.popup__custom-value= value
+                img(src= iconSrc)
+            block
         button.popup__btn.popup__action-btn Применить
         button.popup__btn.popup__close-btn Закрыть

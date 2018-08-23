@@ -8,12 +8,23 @@
   }
 
   &__control-link {
+    position: absolute;
     text-decoration: none;
-    color: #333;
+    color: @grey-base;
     opacity: 0.3;
-    padding: 3px;
+    border-left: 1px solid @grey-base;
+    border-bottom: 1px solid @grey-base;
+    width: 6px;
+    height: 6px;
     &:hover {
       opacity: 1;
+    }
+    &_prev {
+      transform: rotate(45deg);
+    }
+    &_next {
+      margin-left: 10px;
+      transform: rotate(225deg);
     }
   }
 }

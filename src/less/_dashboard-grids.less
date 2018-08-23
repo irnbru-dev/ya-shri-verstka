@@ -19,14 +19,16 @@
 
 .selected-sceme {
   position: relative;
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-auto-rows: 100px;
+    grid-gap: 15px;
+  }
 }
 
-.selected-sceme-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 200px);
-  grid-auto-rows: 100px;
-  grid-gap: 15px;
-}
+
 
 .selected-device-grid {
   display: grid;
@@ -35,32 +37,3 @@
   grid-column-gap: 15px;
   grid-auto-flow: column;
 }
-
-//.selected-device {
-//  position: relative;
-//
-//  h2 {
-//    display: inline-block;
-//  }
-//
-//  &__filtr {
-//    display: inline-block;
-//  }
-//
-//  &__filtr-item {
-//    margin: 0 5px;
-//  }
-//
-//  &__filtr-item-link {
-//    background: #F7F7F7;
-//    border-radius: 20px;
-//    padding: 8px;
-//    font-weight: 700;
-//    color: #000;
-//    font-size: 13px;
-//    &:hover {
-//      transition: .2s all ease-out;
-//      background-color: #FFD93E;
-//    }
-//  }
-//}

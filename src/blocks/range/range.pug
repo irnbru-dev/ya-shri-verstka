@@ -1,3 +1,5 @@
 mixin range(className, minValue, maxValue)
     div.range-wrap
-        input.range(class= className, type='range', min= minValue, max= maxValue)
+        span.minValue= minValue
+        input.range(class= className, type='range')
+        span.maxValue= maxValue

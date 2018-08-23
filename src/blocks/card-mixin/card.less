@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  color: #333;
-  background-color: #f7f7f7;
+  position: relative;
+  color: @grey-base;
+  background-color: @grey-bg;
   text-decoration: none;
   padding: 15px;
   border-radius: 20px;
@@ -12,8 +13,17 @@
 
   &:hover {
     transition: .2s all ease-out;
-    background-color: #fff;
+    background-color: @white;
     box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50);
+  }
+
+  &__icon {
+    position: absolute;
+    top:15px;
+    left: 15px;
+    width: 26px;
+    height: 26px;
+    background-image: url('../svg/icon_temperature.svg');
   }
 
   &__subj {
@@ -21,8 +31,14 @@
   }
 
   &__state {
-    color: #858585;
+    color: @grey-subTxt;
     font-size: 12px;
     margin-top: 5px;
+  }
+}
+
+.card.active {
+  .card__icon {
+    background-image: url('../svg/icon_temperature_2.svg');
   }
 }

@@ -18,7 +18,7 @@ var path = {
     },
     src: {
         js:         'src/js/**/*.js',
-        less:       'src/***/**/*.less',
+        less:       'src/less/style.less',
         pug:        'src/pug/pages/**/*.pug'
     },
     watch: {

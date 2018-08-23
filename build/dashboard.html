@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>Smart ya-house</title>
+    <link href="../src/css/_fonts.css">
     <link rel="stylesheet" href="./css/style.min.css">
   </head>
   <body>
@@ -11,12 +12,12 @@
       <header class="header">
         <div class="container">
           <div class="header__flex-wrap">
-            <div class="header__logo">
+            <a class="header__logo" href="/">
               <img src="../src/img/logo@2x.png" />
-            </div>
+            </a>
             <div class="main-nav collapsed">
               <button class="burger-btn">X</button>
-              <nav class="nav open">
+              <nav class="nav">
                 <ul class="nav__nav-list">
                   <li class="nav__nav-item">
                     <a class="active nav__nav-link" href="#">Сводка</a>
@@ -33,41 +34,6 @@
           </div>
         </div>
       </header>
-      <div class="popup" id="popup__temp">
-        <div class="popup__overlay"></div>
-        <div class="popup__main">
-          <h2 class="popup__title">Elgato Eve Degree Connected</h2>
-          <p class="popup__state">Выключено до 17:00</p>
-          <div class="popup__icon">
-            <span class="popup__custom-value">+23</span>
-            <img src="" />
-          </div>
-          <div class="filtr">
-            <ul class="filtr__list">
-              <li class="filtr__filtr-item">
-                <a class="filtr__filtr-link" href="#">item1</a>
-              </li>
-              <li class="filtr__filtr-item">
-                <a class="filtr__filtr-link" href="#">item2</a>
-              </li>
-              <li class="filtr__filtr-item">
-                <a class="filtr__filtr-link" href="#">item3</a>
-              </li>
-              <li class="filtr__filtr-item">
-                <a class="filtr__filtr-link" href="#">item4</a>
-              </li>
-              <li class="filtr__filtr-item">
-                <a class="filtr__filtr-link" href="#">item5</a>
-              </li>
-            </ul>
-          </div>
-          <div class="range-wrap">
-            <input class="range range__temp" type="range" min="-10" max="+30" />
-          </div>
-        </div>
-        <button class="popup__btn popup__action-btn">Применить</button>
-        <button class="popup__btn popup__close-btn">Закрыть</button>
-      </div>
       <div class="popup" id="popup__light">
         <div class="popup__overlay"></div>
         <div class="popup__main">
@@ -97,99 +63,22 @@
             </ul>
           </div>
           <div class="range-wrap">
+            <span class="minValue"></span>
             <input class="range range__light" type="range" />
+            <span class="maxValue"></span>
           </div>
         </div>
         <button class="popup__btn popup__action-btn">Применить</button>
         <button class="popup__btn popup__close-btn">Закрыть</button>
       </div>
-      <div class="container">
-        <section class="main-window-grid">
-          <div>
-            <h2>Главное</h2>
-            <section class="general">
-              <div class="general-section-grid">
-                <div>
-                  <p class="general__hello">Привет, Геннадий!</p>
-                  <p class="general__notice">Двери и окна закрыты, сигнализация включена.</p>
-                  <div class="general__temp">
-                    <div class="general__temp-item">
-                      <span class="general__temp-desc">Дома</span>
-                      <span class="general__temp-value">+23</span>
-                    </div>
-                    <div class="general__temp-item">
-                      <span class="general__temp-desc">За окном</span>
-                      <span class="general__temp-value">+19</span>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div class="general__card-list-grid">
-                    <a class="card" href="#">
-                      <img src="" />
-                      <div class="card__subj">Phillips Cooler</div>
-                      <span class="card__state">Начнет охлаждать в 16:30</span>
-                    </a>
-                    <a class="card" href="#">
-                      <img src="" />
-                      <div class="card__subj">Xiaomi Yeelight LED Smart Bulb</div>
-                      <span class="card__state">Включится в 17:00</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-          <div class="selected-sceme">
-            <h2>Избранные сценарии</h2>
-            <div class="controls">
-              <div class="controls__control">
-                <a class="controls__control-link" href="#">
-                  <</a>
-              </div>
-              <div class="controls__control">
-                <a class="controls__control-link" href="#">></a>
-              </div>
-            </div>
-            <div class="selected-sceme-grid">
-              <a class="card" href="#">
-                <img src="" />
-                <div class="card__subj">Выключить весь свет в доме и во дворе</div>
-                <span class="card__state"></span>
-              </a>
-              <a class="card" href="#">
-                <img src="" />
-                <div class="card__subj">Я ухожу</div>
-                <span class="card__state"></span>
-              </a>
-              <a class="card" href="#">
-                <img src="" />
-                <div class="card__subj">Включить свет в коридоре</div>
-                <span class="card__state"></span>
-              </a>
-              <a class="card" href="#">
-                <img src="" />
-                <div class="card__subj">Набрать горячую ванну</div>
-                <span class="card__state">Начнется в 18:00</span>
-              </a>
-              <a class="card" href="#">
-                <img src="" />
-                <div class="card__subj">Сделать пол теплым во всей квартире</div>
-                <span class="card__state"></span>
-              </a>
-            </div>
-          </div>
-        </section>
-        <section class="selected-device">
-          <h2 class="selected-device__title">Избранные устройства</h2>
-          <div class="controls">
-            <div class="controls__control">
-              <a class="controls__control-link" href="#">
-                <</a>
-            </div>
-            <div class="controls__control">
-              <a class="controls__control-link" href="#">></a>
-            </div>
+      <div class="popup" id="popup__temp">
+        <div class="popup__overlay"></div>
+        <div class="popup__main">
+          <h2 class="popup__title">Elgato Eve Degree Connected</h2>
+          <p class="popup__state">Выключено до 17:00</p>
+          <div class="popup__icon">
+            <span class="popup__custom-value">+23</span>
+            <img src="" />
           </div>
           <div class="filtr">
             <ul class="filtr__list">
@@ -210,34 +99,150 @@
               </li>
             </ul>
           </div>
-          <div class="selected-device-grid">
-            <a class="card" href="#">
-              <img src="" />
-              <div class="card__subj">Xiaomi Yeelight LED Smart Bulb</div>
-              <span class="card__state">Включено</span>
-            </a>
-            <a class="card" href="#">
-              <img src="" />
-              <div class="card__subj">D-Link Omna 180 Cam</div>
-              <span class="card__state">Включится в 17:00</span>
-            </a>
-            <a class="card" href="#popup__temp">
-              <img src="" />
-              <div class="card__subj">Elgato Eve Degree Connected</div>
-              <span class="card__state">Выключено до 17:00</span>
-            </a>
-            <a class="card" href="#popup__light">
-              <img src="" />
-              <div class="card__subj">Xiaomi Mi Air Purifier 2S</div>
-              <span class="card__state">Включено</span>
-            </a>
-            <a class="card" href="#">
-              <img src="" />
-              <div class="card__subj">Philips Zhirui</div>
-              <span class="card__state">Выключено</span>
-            </a>
+          <div class="range-wrap">
+            <span class="minValue">-10</span>
+            <input class="range range__temp" type="range" />
+            <span class="maxValue">+30</span>
           </div>
-        </section>
+        </div>
+        <button class="popup__btn popup__action-btn">Применить</button>
+        <button class="popup__btn popup__close-btn">Закрыть</button>
+      </div>
+      <div class="page">
+        <div class="container">
+          <section class="main-window-grid">
+            <div>
+              <h2>Главное</h2>
+              <section class="general">
+                <div class="general-section-grid">
+                  <div>
+                    <p class="general__hello">Привет, Геннадий!</p>
+                    <p class="general__notice">Двери и окна закрыты, сигнализация включена.</p>
+                    <div class="general__temp">
+                      <div class="general__temp-item">
+                        <span class="general__temp-desc">Дома</span>
+                        <span class="general__temp-value">+23</span>
+                      </div>
+                      <div class="general__temp-item">
+                        <span class="general__temp-desc">За окном</span>
+                        <span class="general__temp-value">+19</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="general__card-list-grid">
+                      <a class="active card" href="#">
+                        <div class="card__icon"></div>
+                        <div class="card__subj">Phillips Cooler</div>
+                        <span class="card__state">Начнет охлаждать в 16:30</span>
+                      </a>
+                      <a class="card" href="#">
+                        <div class="card__icon"></div>
+                        <div class="card__subj">Xiaomi Yeelight LED Smart Bulb</div>
+                        <span class="card__state">Включится в 17:00</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="selected-sceme">
+              <h2>Избранные сценарии</h2>
+              <div class="controls">
+                <div class="controls__control">
+                  <a class="controls__control-link controls__control-link_prev" href="#"></a>
+                </div>
+                <div class="controls__control">
+                  <a class="controls__control-link controls__control-link_next" href="#"></a>
+                </div>
+              </div>
+              <div class="selected-sceme-grid">
+                <a class="active card" href="#">
+                  <div class="card__icon"></div>
+                  <div class="card__subj">Выключить весь свет в доме и во дворе</div>
+                  <span class="card__state"></span>
+                </a>
+                <a class="card" href="#">
+                  <div class="card__icon"></div>
+                  <div class="card__subj">Я ухожу</div>
+                  <span class="card__state"></span>
+                </a>
+                <a class="card" href="#">
+                  <div class="card__icon"></div>
+                  <div class="card__subj">Включить свет в коридоре</div>
+                  <span class="card__state"></span>
+                </a>
+                <a class="card" href="#">
+                  <div class="card__icon"></div>
+                  <div class="card__subj">Набрать горячую ванну</div>
+                  <span class="card__state">Начнется в 18:00</span>
+                </a>
+                <a class="card" href="#">
+                  <div class="card__icon"></div>
+                  <div class="card__subj">Сделать пол теплым во всей квартире</div>
+                  <span class="card__state"></span>
+                </a>
+              </div>
+            </div>
+          </section>
+          <section class="selected-device">
+            <h2 class="selected-device__title">Избранные устройства</h2>
+            <div class="controls">
+              <div class="controls__control">
+                <a class="controls__control-link controls__control-link_prev" href="#"></a>
+              </div>
+              <div class="controls__control">
+                <a class="controls__control-link controls__control-link_next" href="#"></a>
+              </div>
+            </div>
+            <div class="filtr">
+              <ul class="filtr__list">
+                <li class="filtr__filtr-item">
+                  <a class="filtr__filtr-link" href="#">item1</a>
+                </li>
+                <li class="filtr__filtr-item">
+                  <a class="filtr__filtr-link" href="#">item2</a>
+                </li>
+                <li class="filtr__filtr-item">
+                  <a class="filtr__filtr-link" href="#">item3</a>
+                </li>
+                <li class="filtr__filtr-item">
+                  <a class="filtr__filtr-link" href="#">item4</a>
+                </li>
+                <li class="filtr__filtr-item">
+                  <a class="filtr__filtr-link" href="#">item5</a>
+                </li>
+              </ul>
+            </div>
+            <div class="selected-device-grid">
+              <a class="card" href="#popup__light">
+                <div class="card__icon"></div>
+                <div class="card__subj">Xiaomi Yeelight LED Smart Bulb</div>
+                <span class="card__state">Включено</span>
+              </a>
+              <a class="card" href="#popup__temp">
+                <div class="card__icon"></div>
+                <div class="card__subj">D-Link Omna 180 Cam</div>
+                <span class="card__state">Включится в 17:00</span>
+              </a>
+              <a class="card" href="#">
+                <div class="card__icon"></div>
+                <div class="card__subj">Elgato Eve Degree Connected</div>
+                <span class="card__state">Выключено до 17:00</span>
+              </a>
+              <a class="card" href="#">
+                <div class="card__icon"></div>
+                <div class="card__subj">Xiaomi Mi Air Purifier 2S</div>
+                <span class="card__state">Включено</span>
+              </a>
+              <a class="card" href="#">
+                <div class="card__icon"></div>
+                <div class="card__subj">Philips Zhirui</div>
+                <span class="card__state">Выключено</span>
+              </a>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
     <footer class="footer">

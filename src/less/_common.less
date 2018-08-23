@@ -6,12 +6,8 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
+  font-family: 'Arial-Bold', sans-serif;
   font-size: 14px;
-}
-
-.content {
-  flex: 1 0 auto;
 }
 
 .container {
@@ -19,6 +15,14 @@ body {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.page {
+  padding-top: @header-height;
 }
 
 @media (min-width: 768px) {

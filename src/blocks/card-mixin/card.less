@@ -9,7 +9,11 @@
   padding: 15px;
   border-radius: 20px;
   max-width: 200px;
-  max-height: 90px;
+  float: left;
+  width: 200px;
+  height: 90px; //needs exact height for IE11, not max value
+  margin-right: 15px;
+  margin-bottom: 15px;
 
   &:hover {
     transition: .2s all ease-out;
@@ -21,9 +25,16 @@
     position: absolute;
     top:15px;
     left: 15px;
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__icon_temp {
     background-image: url('../svg/icon_temperature.svg');
+  }
+
+  &__icon_light {
+    background-image: url('../svg/icon_sun.svg');
   }
 
   &__subj {
@@ -38,7 +49,37 @@
 }
 
 .card.active {
-  .card__icon {
-    background-image: url('../svg/icon_temperature_2.svg');
+  .card__icon_temp {
+    background-image: url('../svg/icon_temperature_active.svg');
+  }
+  .card__icon_light {
+    background-image: url('../svg/icon_sun_active.svg');
+  }
+
+}
+
+@supports (display: grid) {
+  .card {
+    float: none;
+    margin: 0;
+    height: auto;
+    max-height: 90px;
+    width: auto;
+    max-width: 200px;
+  }
+
+}
+
+.half-card {
+  height: 11px;
+  border-radius: 20px 20px 0 0;
+  &:hover {
+    box-shadow: none;
+  }
+
+  & svg {
+    margin: 0 auto;
+    max-width: 20px;
+    max-height:20px;
   }
 }

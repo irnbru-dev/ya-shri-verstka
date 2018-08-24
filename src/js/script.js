@@ -29,4 +29,5 @@ $(document).ready(function () {
     $('.popup__close-btn').on('click', function () {
         $('.popup').removeClass('open');
     });
+
 });

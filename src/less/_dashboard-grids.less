@@ -1,39 +1,79 @@
 .main-window-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 25px;
-  justify-items: stretch;
-}
+  display: flex;
 
-.general-section-grid {
-  display: grid;
-  grid-template-columns: 1fr 200px;
-  grid-gap: 25px;
-}
+  & > div {
+    width: 48%;
+    margin-right: 2%;
+    @media (max-width: 991px) {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
 
-.general__card-list-grid {
-  display: grid;
-  grid-template-rows: repeat(2, 120px);
-  grid-row-gap: 15px;
-}
-
-.selected-sceme {
-  position: relative;
-
-  &-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 200px);
-    grid-auto-rows: 100px;
-    grid-gap: 15px;
+  & .selected-sceme {
+    width: 50%;
+    margin-right: 0;
+    @media (max-width: 991px) {
+      width: 100%;
+    }
   }
 }
 
+.general-section-grid {
+  display: flex;
+}
 
+.general__card-list-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
-.selected-device-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 200px);
-  grid-template-rows: 120px;
-  grid-column-gap: 15px;
-  grid-auto-flow: column;
+@supports (display: grid) {
+  .main-window-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+    justify-items: stretch;
+
+    & > div {
+      width: auto;
+      margin-right: 0;
+    }
+
+    & .selected-sceme {
+      width: auto;
+    }
+  }
+
+  .general-section-grid {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-gap: 25px;
+  }
+
+  .general__card-list-grid {
+    display: grid;
+    grid-template-rows: repeat(2, 120px);
+    grid-row-gap: 15px;
+  }
+
+  .selected-sceme {
+    position: relative;
+
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 200px);
+      grid-auto-rows: 100px;
+      grid-gap: 15px;
+    }
+  }
+
+  .selected-device-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    grid-template-rows: 120px;
+    grid-column-gap: 15px;
+    grid-auto-flow: column;
+  }
 }

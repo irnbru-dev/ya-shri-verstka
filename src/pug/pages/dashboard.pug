@@ -17,25 +17,32 @@ block content
                     h2 Главное
                     +general
                         div.general__card-list-grid
-                            +card('#', 'active', 'Phillips Cooler', 'Начнет охлаждать в 16:30')
-                            +card('#', '', 'Xiaomi Yeelight LED Smart Bulb', 'Включится в 17:00')
+                            +card('#', 'active', 'card__icon_temp', 'Phillips Cooler', 'Начнет охлаждать в 16:30')
+                            +card('#', '', 'card__icon_light', 'Xiaomi Yeelight LED Smart Bulb', 'Включится в 17:00')
+                            a(href="#").card.half-card
+                                include ../../svg/arrows.svg
 
                 div.selected-sceme
                     h2 Избранные сценарии
                     +controls()
                     div.selected-sceme-grid
-                        +card('#', 'active', 'Выключить весь свет в доме и во дворе' )
-                        +card('#', '', 'Я ухожу')
-                        +card('#', '', 'Включить свет в коридоре')
-                        +card('#', '', 'Набрать горячую ванну', 'Начнется в 18:00')
-                        +card('#', '', 'Сделать пол теплым во всей квартире')
+                        +card('#', 'active', 'card__icon_temp', 'Выключить весь свет в доме и во дворе' )
+                        +card('#', '', 'card__icon_light', 'Я ухожу')
+                        +card('#', '', 'card__icon_light', 'Включить свет в коридоре')
+                        +card('#', '', 'card__icon_temp', 'Набрать горячую ванну', 'Начнется в 18:00')
+                        +card('#', '', 'card__icon_temp', 'Сделать пол теплым во всей квартире')
+                        +card('#', 'active', 'card__icon_light', 'Выключить весь свет в доме и во дворе' )
+                        +card('#', '', 'card__icon_light', 'Я ухожу')
+                        +card('#', '', 'card__icon_light', 'Включить свет в коридоре')
+                        +card('#', '', 'card__icon_temp', 'Набрать горячую ванну', 'Начнется в 18:00')
+                        +card('#', '', 'card__icon_temp', 'Сделать пол теплым во всей квартире')
             section.selected-device
                 h2.selected-device__title Избранные устройства
                 +controls()
                 +filtr()
                 div.selected-device-grid
-                    +card('#popup__light', '', 'Xiaomi Yeelight LED Smart Bulb', 'Включено')
-                    +card('#popup__temp', '', 'D-Link Omna 180 Cam', 'Включится в 17:00')
-                    +card('#', '', 'Elgato Eve Degree Connected', 'Выключено до 17:00')
-                    +card('#', '', 'Xiaomi Mi Air Purifier 2S', 'Включено')
-                    +card('#', '', 'Philips Zhirui', 'Выключено')
+                    +card('#popup__light', '', 'card__icon_light', 'Xiaomi Yeelight LED Smart Bulb', 'Включено')
+                    +card('#popup__temp', 'active', 'card__icon_light', 'D-Link Omna 180 Cam', 'Включится в 17:00')
+                    +card('#', 'active', 'card__icon_temp', 'Elgato Eve Degree Connected', 'Выключено до 17:00')
+                    +card('#', '', 'card__icon_light', 'Xiaomi Mi Air Purifier 2S', 'Включено')
+                    +card('#', '', 'card__icon_light', 'Philips Zhirui', 'Выключено')

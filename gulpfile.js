@@ -17,7 +17,7 @@ var path = {
         html:       'build/'
     },
     src: {
-        js:         'src/js/**/*.js',
+        js:         'src/js/script.js',
         less:       'src/less/style.less',
         pug:        'src/pug/pages/**/*.pug'
     },
